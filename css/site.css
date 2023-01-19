@@ -1,4 +1,8 @@
-*{
-    margin:o;
-    padding: 0;
+* {
+  margin: o;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  background-color: red;
 }

@@ -1,0 +1,2 @@
+declare let value: string;
+
