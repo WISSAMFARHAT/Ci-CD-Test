@@ -23,4 +23,4 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Update version in package.json
-      run: npm version patch -m "update version to %s"
+      run: sudo npm version patch -m "update version to %s"
