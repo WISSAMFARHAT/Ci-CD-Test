@@ -34,5 +34,5 @@ jobs:
 
       #change version package.json
       - name: Update version in package.json
-        run: npm version patch -m "update version to %s"
+        run: npm version patch -m "update version to 2"
      
