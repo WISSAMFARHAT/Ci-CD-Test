@@ -30,7 +30,7 @@ jobs:
         run: npm install -g cloudmate
         
       - name: Run command using npm package
-        run: mpm cloudmate mate
+        run: mate
 
       #change version package.json
       - name: Update version in package.json
