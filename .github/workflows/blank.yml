@@ -36,7 +36,5 @@ jobs:
       - name: Update version in package.json
         run: |
           new_version=$(cat version.txt)
-          jq --arg new_version "$new_version" '.version = $new_version' package.json > package.json.tmp
-          mv package.json.tmp package.json
-        
+          node -e "const fs = require('fs'); const packageJson = require('./package.json'); packageJson.version = '$new_version'; fs.writeFileSync('./package.json', JSON.stringify(packageJson, null, 2));"
      
