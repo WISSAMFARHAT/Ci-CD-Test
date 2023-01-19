@@ -39,8 +39,4 @@ jobs:
           jq --arg new_version "$new_version" '.version = $new_version' package.json > package.json.tmp
           mv package.json.tmp package.json
         
-      #publis to azure blob storage
-      - name: Publish to Azure Blob Storage
-        run: |
-          az storage blob upload -f ${{secret.path}} -c container-name -n ${{secret.containerName}} --account-name ${{secret.accountName}} --account-key  ${{secret.accountKey}}
-
+     
