@@ -15,26 +15,12 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-  
-      #install and run cloudmate
-      - name: Install npm package
-        run: npm install -g cloudmate
-        
-      - name: Run command using npm package
-        run: mate
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      #change version package.json
-      - name: Update version in package.json
-        run: |
-          new_version=$(cat version.txt)
-          node -e "const fs = require('fs'); const packageJson = require('./package.json'); packageJson.version = '$new_version'; fs.writeFileSync('./package.json', JSON.stringify(packageJson, null, 2));"
-     
+    - name: Update version in package.json
+      run: npm version patch -m "update version to %s"
