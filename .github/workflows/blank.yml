@@ -28,7 +28,7 @@ jobs:
       - name: Publish to Azure Blob Storage
         uses: actions/azure-storage-upload@v1
         with:
-          connection-string: "test"
+          connection-string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
           container-name: cloudweb
           source: path/to/source
 
