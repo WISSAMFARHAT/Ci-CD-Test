@@ -25,10 +25,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         
-      - name: Publish to Azure Blob Storage
-        uses: LanceMcCarthy/Action-AzureBlobUpload@v2
-        with:
-          connection_string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
-          container_name: cloudweb
-          source_folder: source
+      - name: Get package version
+        run: |
+          version=$(jq -r '.version' package.json)
+          echo "The package version is $version"
+
 
