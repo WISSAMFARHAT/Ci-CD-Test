@@ -1,11 +1,11 @@
 {
 	"files": [
 		{
-			"output": "css/site.css",
+			"output": "source/css/site.css",
 			"input": "src/css/site.less"
 		},
 		{
-			"output": "js/site.js",
+			"output": "source/js/site.js",
 			"input": "src/js/site.ts"
 		}
 	],
