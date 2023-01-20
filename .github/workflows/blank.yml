@@ -28,5 +28,5 @@ jobs:
       - name: check version
         run: |
           npm install is-url
-          isUrl("google.com")
+          isUrl(google.com)
         
