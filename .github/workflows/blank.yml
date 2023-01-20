@@ -32,11 +32,3 @@ jobs:
       - name: Run command using npm package
         run: mate
 
-    
-      - name: Commit and push to GitHub
-        run: |
-          git config --global user.email "farhat.wissam@outlook.com"
-          git config --global user.name "wissam farhat"
-          git add .
-          git commit -m "CI / CD"
-          git push --force -u origin
