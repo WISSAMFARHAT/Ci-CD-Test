@@ -24,9 +24,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
-      - name: check version
-        run: |
-          npm install is-url
-          isUrl(google.com)
+      - name: Install is-url
+        run: npm install is-url
+        
+      - name: Run tests
+        run: npm test
         
