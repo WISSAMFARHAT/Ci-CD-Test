@@ -26,7 +26,7 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Publish to Azure Blob Storage
-        uses: azure/storage-blob-upload@v1
+        uses: actions/azure-storage-upload@v1
         with:
           connection-string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
           container-name: cloudweb
