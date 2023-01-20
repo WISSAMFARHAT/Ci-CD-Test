@@ -29,6 +29,6 @@ jobs:
         uses: LanceMcCarthy/Action-AzureBlobUpload@v2
         with:
           connection_string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
-          container-name: cloudweb
+          container_name: cloudweb
           source_folder: source
 
