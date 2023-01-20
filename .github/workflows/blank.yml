@@ -28,7 +28,7 @@ jobs:
       - name: Publish to Azure Blob Storage
         uses: LanceMcCarthy/Action-AzureBlobUpload@v2
         with:
-          connection-string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+          connection_string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
           container-name: cloudweb
           source_folder: source
 
