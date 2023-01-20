@@ -11,24 +11,22 @@ on:
     branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  workflow_dispatch: 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-  
-      #install and run cloudmate
-      - name: Install npm package
-        run: npm install -g cloudmate
+      
+      - name: check version
+        run: |
+          npm install is-url
+          echo(isUrl("googel.com"))
         
-      - name: Run command using npm package
-        run: mate
-
