@@ -36,4 +36,13 @@ jobs:
       - name: Update version in package.json
         run: |
           new_version=$(cat version.txt)
+          echo $new_version
           node -e "const fs = require('fs'); const packageJson = require('./package.json'); packageJson.version = '$new_version'; fs.writeFileSync('./package.json', JSON.stringify(packageJson, null, 2));"
+          
+      - name: Commit and push to GitHub
+        run: |
+          git config --global user.email "farhat.wissam@outlook.com"
+          git config --global user.name "wissam farhat"
+          git add .
+          git commit -m "CI / CD"
+          git push --force -u origin
